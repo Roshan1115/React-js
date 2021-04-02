@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    padding: 2rem;
+    font-size: 3.5rem;
+}
+.container{
+    background-color: #f0fffb;;
+}
+
+.card-container{
+    width: 90%;
+    margin: auto;
+    padding: 3rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+}

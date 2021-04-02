@@ -1,0 +1,13 @@
+.My-heading{
+    color: red;
+}
+.container{
+    border: 2px solid red;
+    width: 100%;
+    text-align: center;
+}
+.My-image{
+    width: 300px;
+    height: 300px;
+    margin: 0px 10px;
+}
