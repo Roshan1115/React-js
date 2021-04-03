@@ -1,0 +1,21 @@
+.Container{
+    text-align: center;
+    border: 2px double black;
+}
+h1{
+    font-size: 3rem;
+}
+.Container input{
+    width: 80%;
+    padding: .3rem 0rem;
+    padding-left: .4rem;
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+    outline: none;
+}
+.Container button{
+    width: 30%;
+    padding: .3rem .3rem;
+    outline: none;
+    margin-bottom: 1rem;
+}

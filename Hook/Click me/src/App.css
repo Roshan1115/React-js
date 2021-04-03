@@ -29,3 +29,18 @@ button{
 button:active{
     color: white;
 }
+
+
+/* FOR ROOT 2 COMPONENTS  */
+.divAppRoot-2{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(124, 124, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roo_2_h1{
+    font-size: 2rem;
+}
