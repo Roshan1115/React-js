@@ -11,3 +11,19 @@
     align-items: center;
     background-color: rgb(201, 201, 157);
 }
+#root-2{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 146, 194);
+}
+#root-3{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(199, 160, 135);
+}
