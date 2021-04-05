@@ -32,9 +32,6 @@ const AppForRoot_3 = () => {
                     Password: event.target.value
                 }
             }
-            
-            // console.log(Data.Name);
-            // console.log(prev);
         })
     }
   
@@ -73,7 +70,7 @@ const AppForRoot_3 = () => {
 
     const showName = giveNameData(Data.Name)
     const showEmail = giveEmailData(Data.Email)
-    const showPass = giveEmailData(Data.Password)
+    const showPass = givePasswordData(Data.Password)
 
     return(
         <>

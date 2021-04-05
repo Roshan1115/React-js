@@ -118,6 +118,7 @@ ReactDOM.render(
     ,document.getElementById('root-7')
 );
 
+
 // Bringing element through master component
 ReactDOM.render(
     <>
@@ -159,4 +160,40 @@ ReactDOM.render(
     <h1>{LastElement }</h1>
     <hr/>
     </>,document.getElementById('root-10')
+)
+
+
+// Spread Operator "..." in Array
+// The index number of Fullname's element is added to the result arrau "BioData"
+const Fullname = ['Roshan', 'Bishi']
+const BioData = [19, ...Fullname, 'Male']
+
+const Games = ['IGI', 'Call Of Duty', 'GTA-5']
+const [firstele, ...remaining] = Games
+ReactDOM.render(
+    <>
+    <h1>spread operator "..." in Array</h1>
+    <h1>{BioData[0]} {BioData[1]} {BioData[2]} {BioData[3]}</h1>
+    <h1>{firstele}, {remaining[0]}, {remaining[1]}</h1>
+    <hr/>
+    </>,document.getElementById('root-11')
+)
+
+
+//Spread operator "..." in Object
+const fullnameOnj = {
+    fname: 'Roshan',
+    lname: 'Bishi'
+}
+const BioDataobj = {
+    age: 19,
+    ...fullnameOnj,
+    gender: 'male'
+}
+ReactDOM.render(
+    <>
+    <h1>spread operator "..." in object</h1>
+    <h1>{BioDataobj.age} {BioDataobj.fname} {BioDataobj.lname} BioDataobj.gender </h1>
+    <hr/>
+    </>,document.getElementById('root-12')
 )
