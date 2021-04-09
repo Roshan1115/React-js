@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import './App.css'
 
 // from material ui 
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
+import './App.css'
 
 const App = () => {
   let [count, setcount] = useState(0)
@@ -22,17 +23,19 @@ const App = () => {
 
     return(
         <>
-    <div className="Container">
+    <div className="root-3-Container">
         <h1>{count}</h1>
-        <div className="btn-container">
-            <button onClick={Increament} >
-              <AddCircleOutlineIcon />
-            </button>
-        </div>
-        <div className="btn-container">
-            <button onClick={Decreament} >
-              <HighlightOffIcon />
-            </button>
+        <div className="btn3-container">
+        <Tooltip title="Add">
+        <Button variant="contained" size="large" onClick={Increament} className="btn_green" >
+              <AddIcon />
+            </Button>
+            </Tooltip>
+            <Tooltip title="Delete">
+          <Button variant="contained" size="large" onClick={Decreament} className="btn-red" >
+              <RemoveIcon />
+            </Button>
+            </Tooltip>
         </div>
     </div>
         </>
