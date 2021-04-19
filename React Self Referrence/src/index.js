@@ -5,8 +5,9 @@ import './index.css'
 import Heading from './Heacing_component'   // For Component Tutorial
 import MyPara from './Para'     // For Component Tutorial
 import MyList from './List'     // For Component Tutorial
-
 import App from './App'     // For Master Component Tutorial
+import AppBootstrap from './Appforbootstrap'    // for bootstra in react
+
 
 
 // In react -v 16 and above it is possible to pass multiple JSX element in to a single element using array element and a <div> tag. Make sure to give comma if the JSXs are in array
@@ -196,4 +197,14 @@ ReactDOM.render(
     <h1>{BioDataobj.age} {BioDataobj.fname} {BioDataobj.lname} BioDataobj.gender </h1>
     <hr/>
     </>,document.getElementById('root-12')
+)
+
+
+// Bootstrap use in react
+ReactDOM.render(
+    <>
+    <h1>Bootstrap use in react.</h1>
+    <AppBootstrap/>
+    <hr/>
+    </>,document.getElementById("root-13")
 )
