@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0%;
+}
+
+/*.............Header ............. */
+.Header{
+  width: 100vw;
+  height: 13vh;
+  background-color:  rgb(237 191 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header h1{
+  font-size: 3.5rem;
+    color: #000000a1;
+}
+
+/* ..........Main...........  */
+.main_container{
+  width: 100vw;
+  height: 78vh;
+  /* border: 2px solid red; */
+}
+
+.input_container{
+  /* border: 2px solid green; */
+  margin-top: 2rem;
+  height: 27vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_holder{
+  box-shadow: 2px 2px 11px #00000047;
+  height: 25vh;
+  border-radius: 1rem;
+  width: 39vw;
+  position: relative;
+}
+
+.input_holder input{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 92%;
+  outline: none;
+  border: none;
+}
+
+.input_holder input:focus{
+  border-bottom: 2px solid rgb(107, 106, 106);
+  /* font-weight: bold; */
+}
+
+.input_holder textarea{
+  width: 80%;
+  height: 64%;
+  margin-left: 1rem;
+  outline: none;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+}
+.input_holder textarea::placeholder{
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input_holder button{
+  background-color: #ffffff;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -7%;
+  right: 2%;
+}
+.input_holder button:hover{
+  background-color: rgb(245, 245, 245);
+}
+
+.MuiFab-label svg{
+  font-size: 2rem;
+  color: rgb(221 204 36);
+}
