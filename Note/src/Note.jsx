@@ -11,8 +11,10 @@ const Note = (props) => {
       <div className='NoteList'>
         <h3>{props.title_h3}</h3>
         <p>{props.content_p}</p>
-        <Tooltip title="Delete">
-          <IconButton aria-label="delete">
+        <Tooltip title="Delete" onClick={() => {
+          props.deleteParticular(props.id)
+        }}>
+          <IconButton aria-label="delete" >
             <DeleteIcon />
           </IconButton>
         </Tooltip>
@@ -22,3 +24,5 @@ const Note = (props) => {
 }
 
 export default Note;
+
+//onClick={props.deleteParticular(props.id)}

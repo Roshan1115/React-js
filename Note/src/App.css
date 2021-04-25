@@ -37,7 +37,8 @@
 
 .input_holder{
   box-shadow: 2px 2px 11px #00000047;
-  width: 504px;
+  max-width: 504px;
+  width: 95%;
   height: 261px;
   border-radius: 1rem;
   position: relative;
@@ -128,7 +129,7 @@
   right: 2%;
 }
 .NoteList button svg{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(221 204 36);
 }
 

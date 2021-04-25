@@ -26,6 +26,9 @@ const Main = () => {
 
   // Add note to the page
   const addNote = () => {
+    if(input.title === "" || input.content === ""){
+      return;
+    }
     setNoteArr((prev) => {
       return [...prev, input]
     })
@@ -42,6 +45,16 @@ const Main = () => {
         inputContent.focus();
       }
   }
+
+  // Delete note
+  const deleteNote = (id) => {
+    setNoteArr((prev) => {
+      return prev.filter((curValue, index) => {
+        return index !== id;
+      })
+    })
+  }
+
 
   return (
     <>
@@ -66,6 +79,7 @@ const Main = () => {
               id={index}
               title_h3={currentValue.title}
               content_p={currentValue.content}
+              deleteParticular = {deleteNote}
             />)
           })}
 
