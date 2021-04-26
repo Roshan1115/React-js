@@ -29,25 +29,24 @@
 .input_container{
   /* border: 2px solid green; */
   margin-top: 2rem;
-  height: 27vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .input_holder{
   box-shadow: 2px 2px 11px #00000047;
   max-width: 504px;
   width: 95%;
-  height: 261px;
+  display: inline-block;
   border-radius: 1rem;
   position: relative;
+  text-align: initial;
 }
 
 .input_holder input{
   font-size: 1.5rem;
   margin-left: 1rem;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 92%;
   outline: none;
   border: none;
@@ -60,10 +59,11 @@
 
 .input_holder textarea{
   width: 80%;
-  height: 69%;
+  height: 180px;
+  margin-bottom: 5px;
   margin-left: 1rem;
   outline: none;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   font-size: 1.3rem;
   font-family: 'Roboto', sans-serif;
   border: none;

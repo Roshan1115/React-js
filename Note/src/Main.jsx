@@ -5,14 +5,16 @@ import Fab from '@material-ui/core/Fab';
 import Note from './Note'
 
 
-
 const Main = () => {
 
+  // hooks.....................................................
   const [input, setInput] = useState({
     title: "",
     content: ""
   });
   const [noteArr, setNoteArr] = useState([]);
+  const [expand, setExpand] = useState(false);
+  // end of hooks .............................................
 
   // take input into the state  
   const takeInput = (e) => {
@@ -26,7 +28,7 @@ const Main = () => {
 
   // Add note to the page
   const addNote = () => {
-    if(input.title === "" || input.content === ""){
+    if (input.title === "" || input.content === "") {
       return;
     }
     setNoteArr((prev) => {
@@ -40,10 +42,10 @@ const Main = () => {
 
   //change focus from title to content field 
   const changeFocus = (e) => {
-      if(e.key === "Enter" && e.target.value !== ""){
-        const inputContent = document.querySelector("#content")
-        inputContent.focus();
-      }
+    if (e.key === "Enter" && e.target.value !== "") {
+      const inputContent = document.querySelector("#content")
+      inputContent.focus();
+    }
   }
 
   // Delete note
@@ -55,19 +57,34 @@ const Main = () => {
     })
   }
 
+  const expandFlield = () => {
+    setExpand(true);
+  }
+  const Compress = () => {
+    setExpand(false)
+  }
 
   return (
     <>
-      <div className="main_container">
+      <div className="main_container" onDoubleClick={Compress}>
         <div className="input_container">
           <div className='input_holder'>
-            <input type="text" id="title" placeholder='Tittle' name="title" value={input.title} onChange={takeInput} onKeyDown={changeFocus} />
-            <textarea placeholder='Write note' id="content" name="content" value={input.content} onChange={takeInput} />
-            <Tooltip title="Add" aria-label="add" id="myAdd_btn" onClick={addNote}>
-              <Fab color="primary" >
-                <AddIcon />
-              </Fab>
-            </Tooltip>
+
+            {expand ?
+              <>
+                <input type="text" id="title" placeholder='Tittle' name="title" value={input.title} onChange={takeInput} onKeyDown={changeFocus} />
+                <textarea placeholder='Write note' id="content" name="content" value={input.content} onChange={takeInput} />
+                <Tooltip title="Add" aria-label="add" id="myAdd_btn" onClick={addNote}>
+                  <Fab color="primary" >
+                    <AddIcon />
+                  </Fab>
+                </Tooltip>
+              </>
+              :
+              <>
+                <input type="text" id="title" placeholder='Write Something' name="title" onClick={expandFlield} />
+              </>}
+
           </div>
         </div>
 
@@ -79,7 +96,7 @@ const Main = () => {
               id={index}
               title_h3={currentValue.title}
               content_p={currentValue.content}
-              deleteParticular = {deleteNote}
+              deleteParticular={deleteNote}
             />)
           })}
 
