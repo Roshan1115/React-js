@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-
 import Heading from './Heacing_component'   // For Component Tutorial
 import MyPara from './Para'     // For Component Tutorial
 import MyList from './List'     // For Component Tutorial
 import App from './App'     // For Master Component Tutorial
 import AppBootstrap from './Appforbootstrap'    // for bootstra in react
+import AppForContext from './Context/AppContext'   // for context (hook)
 
 
 
@@ -207,4 +207,14 @@ ReactDOM.render(
     <AppBootstrap/>
     <hr/>
     </>,document.getElementById("root-13")
+)
+
+
+// Context use
+ReactDOM.render(
+    <>
+    <h1>This is for context use tutorial.</h1>
+    <AppForContext />
+    <hr/>
+    </>,document.getElementById("root-14")
 )
