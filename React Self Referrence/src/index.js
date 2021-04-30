@@ -7,7 +7,7 @@ import MyList from './List'     // For Component Tutorial
 import App from './App'     // For Master Component Tutorial
 import AppBootstrap from './Appforbootstrap'    // for bootstra in react
 import AppForContext from './Context/AppContext'   // for context (hook)
-
+import AppUUseEffact from './AppForUseEffact'   // for useEffact tutorial
 
 
 // In react -v 16 and above it is possible to pass multiple JSX element in to a single element using array element and a <div> tag. Make sure to give comma if the JSXs are in array
@@ -217,4 +217,14 @@ ReactDOM.render(
     <AppForContext />
     <hr/>
     </>,document.getElementById("root-14")
+)
+
+
+// useEffact use
+ReactDOM.render(
+    <>
+    <h1>This is useEffect.</h1>
+    <AppUUseEffact />
+    <hr/>
+    </>,document.getElementById("root-15")
 )
