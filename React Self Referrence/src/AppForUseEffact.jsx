@@ -8,6 +8,10 @@ const AppUseEffact = () => {
     alert("use Effact funciton called. Value of num is changed by clicking first button.")
   }, [num])
 
+  useEffect(()=> {
+    document.title = `you clicked 2nd btn ${secondnum} time.`
+  }, [secondnum])
+
 const increaseNum = () => {
   setNum(num + 1)
 }
@@ -18,7 +22,7 @@ const increaseNumSecond = () => {
   return(
     <>
     <button onClick={increaseNum}>Click me {num} </button>
-    <button onClick={increaseNumSecond}>Click me {secondnum} </button>
+    <button onClick={increaseNumSecond}>Click me to change the titlle {secondnum} </button>
     </>
   )
 }
