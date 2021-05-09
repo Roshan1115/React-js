@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './Challenge_3_App'
+import PokemonCard from './PokemonCard'
 
 
 //.........................................................
@@ -45,4 +46,18 @@ ReactDOM.render(
 // Make page that show 'good morning' between 0:00 to 12:00 , 'good Afternoon' between 12:00 to 17:00, 'good evening' between 17:00 to 20:00 and then 'good night' between 20:00 to 0:00.
 // Complete using Component system
 
-ReactDOM.render(<App />,document.getElementById('root-3'));
+ReactDOM.render(
+<>
+<App />
+<hr />
+</>,document.getElementById('root-3'));
+
+
+//..................................................................
+// challnge : 4 pokemon api
+
+ReactDOM.render(
+    <>
+    <PokemonCard />
+    </>,document.getElementById("root-4")
+)
