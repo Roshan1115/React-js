@@ -9,6 +9,9 @@ import AppBootstrap from './Appforbootstrap'    // for bootstra in react
 import AppForContext from './Context/AppContext'   // for context (hook)
 import AppUUseEffact from './AppForUseEffact'   // for useEffact tutorial
 
+import {BrowserRouter} from 'react-router-dom'
+import AppRtr from './Router/App'
+
 
 // In react -v 16 and above it is possible to pass multiple JSX element in to a single element using array element and a <div> tag. Make sure to give comma if the JSXs are in array
 ReactDOM.render( 
@@ -227,4 +230,13 @@ ReactDOM.render(
     <AppUUseEffact />
     <hr/>
     </>,document.getElementById("root-15")
+)
+
+
+// Router
+ReactDOM.render(
+    <BrowserRouter>
+        <AppRtr/>
+        <hr />
+    </BrowserRouter>, document.getElementById("root-16")
 )
