@@ -19,7 +19,7 @@ const AppRout = () => {
 
     <Switch>
     <Route exact path='/about' component={About} />
-    <Route exact path='/contact' component={Contact} />
+    <Route exact path='/contact' render={Contact} />
     <Route component={errorCom} />
     </Switch>
     </>

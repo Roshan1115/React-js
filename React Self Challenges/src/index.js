@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import App from './Challenge_3_App'
 import PokemonCard from './PokemonCard'
 
+import AppRtr from './Router/App'
+import Navbar from './Router/Navbar'
+import {BrowserRouter} from 'react-router-dom'
 
 //.........................................................
 // !st Challenge : Creating ordered list in JSX
@@ -59,5 +62,18 @@ ReactDOM.render(
 ReactDOM.render(
     <>
     <PokemonCard />
+    <hr />
     </>,document.getElementById("root-4")
+)
+
+//.........................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+// navbar using routing
+ReactDOM.render(
+    <>
+    <BrowserRouter>
+        <Navbar />
+        <AppRtr/>
+    </BrowserRouter>
+    <hr />
+    </>,document.getElementById("root-5")
 )
