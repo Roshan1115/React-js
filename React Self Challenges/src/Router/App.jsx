@@ -2,6 +2,7 @@ import React from 'react'
 import About from './About'
 import Contact from './Contact'
 import User from './User'
+import Search from './Search'
 import {Route, Switch} from 'react-router-dom'
 
 
@@ -25,6 +26,7 @@ const AppRout = () => {
     <Route exact path='/about' component={About} />
     <Route exact path='/contact' render={() => <Contact name="Roshan" />} /> 
     <Route path='/user/:firstName/:lastName' component={User} />
+    <Route exact path='/search' component={Search} />
     <Route component={errorCom} />
     </Switch>
     </>
