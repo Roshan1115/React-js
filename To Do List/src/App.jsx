@@ -13,17 +13,18 @@ const App = () => {
 
   //store the data in an state array
   const storeItem = () => {
+    const allInput = { id : new Date().getTime().toString(), actualItem : item}
     setitemArr((prev) => {
-      return [...prev, item]
+      return [...prev, allInput]
     })
     setitem("")
   }
 
-  //this function is called when the delete button is clicked fro the component
+  //this function is called when the delete button is clicked from the component
   const deleteItem = (id) => {
     setitemArr((prevValue) => {
-      return prevValue.filter((element, index) => {
-        return index !==id
+      return prevValue.filter((element) => {
+        return element.id !==id
       })
     })
   }
@@ -39,12 +40,12 @@ const App = () => {
       <button onClick={storeItem} id="add">+</button>
     </div>
     <div className="working-conatainer">
-      {itemArr.map((currValue, index) => {
+      {itemArr.map((currValue) => {
         return(<ItemComponent
-        key={index} 
-        id={index}
+        key={currValue.id} 
+        id={currValue.id}
         onDelete={deleteItem}
-        text={currValue} />)
+        text={currValue.actualItem} />)
       })}
     </div>
   </div>

@@ -12,6 +12,10 @@ const ItemComponent = (props) => {
         <div className="list-text">
           <h2>{props.text}</h2>
         </div>
+        <i className="fas fa-edit" style={{
+          marginRight: "1rem",
+          fontSize: "1.5rem"
+        }}></i>
     </div>
     </>
   )
