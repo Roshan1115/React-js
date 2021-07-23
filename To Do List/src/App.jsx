@@ -6,6 +6,8 @@ const App = () => {
 
   const [item, setitem] = useState("")
   const [itemArr, setitemArr] = useState([])
+  const [toggleEdit, settoggleEdit] = useState(false)
+  const [itemId, setitemId] = useState(null)
 
   const takeItem = (event) => {
     setitem(event.target.value)
@@ -13,7 +15,26 @@ const App = () => {
 
   //store the data in an state array
   const storeItem = () => {
-    const allInput = { id : new Date().getTime().toString(), actualItem : item}
+    if(item === ""){
+      alert("Please input something")
+      return;
+    }
+    if(toggleEdit){
+
+      const editedArr = itemArr.map((element) => {
+        if(element.id === itemId){
+          element = {...element, name: item};
+        }
+        return element;
+      })
+      setitemArr(editedArr);
+      setitemId(null)
+      setitem("")
+      settoggleEdit(false)
+      return;
+    }
+
+    const allInput = { id : new Date().getTime().toString(), name : item}
     setitemArr((prev) => {
       return [...prev, allInput]
     })
@@ -29,6 +50,27 @@ const App = () => {
     })
   }
 
+
+  const edit = (id) => {
+    // console.log(id);
+    const [data] = itemArr.filter((element) => {
+      return element.id === id
+    })
+    // console.log(data);
+    setitem(data.name);
+    setitemId(data.id)
+    settoggleEdit(true)
+  }
+
+  // const AddEdited = (id)=> {
+
+    
+  //   setitemId(null)
+  //   setitem("")
+  //   settoggleEdit(false)
+  // }
+
+
   return(
     <>
   <div className="container">
@@ -37,7 +79,20 @@ const App = () => {
     </div>
     <div className="addlist-container">
       <input type="text" name="Add_item" placeholder='Add an item' value={item} onChange={takeItem} />
-      <button onClick={storeItem} id="add">+</button>
+
+      {
+        toggleEdit ? 
+        <i className="fas fa-check" style={{
+          marginRight: "1rem",
+          fontSize: "2rem",
+          color: 'green'
+        }}
+        onClick={storeItem}
+        ></i>
+        :
+        <button onClick={storeItem} id="add">+</button>
+      }
+      
     </div>
     <div className="working-conatainer">
       {itemArr.map((currValue) => {
@@ -45,7 +100,8 @@ const App = () => {
         key={currValue.id} 
         id={currValue.id}
         onDelete={deleteItem}
-        text={currValue.actualItem} />)
+        text={currValue.name}
+        editItem = {edit} />)
       })}
     </div>
   </div>

@@ -15,7 +15,9 @@ const ItemComponent = (props) => {
         <i className="fas fa-edit" style={{
           marginRight: "1rem",
           fontSize: "1.5rem"
-        }}></i>
+        }}
+        onClick={() => props.editItem(props.id)}
+        ></i>
     </div>
     </>
   )
